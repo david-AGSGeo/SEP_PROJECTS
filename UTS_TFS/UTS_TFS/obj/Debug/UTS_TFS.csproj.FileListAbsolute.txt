@@ -50,8 +50,8 @@ M:\SEP_Project\UTS_TFS\UTS_TFS\bin\Microsoft.Owin.Security.OAuth.xml
 M:\SEP_Project\UTS_TFS\UTS_TFS\bin\Microsoft.Owin.Security.Google.xml
 M:\SEP_Project\UTS_TFS\UTS_TFS\bin\Microsoft.Owin.Security.Twitter.xml
 M:\SEP_Project\UTS_TFS\UTS_TFS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.csprojResolveAssemblyReference.cache
 M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.dll
 M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.pdb
 M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.Migrations.Init.resources
 M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.csproj.GenerateResource.Cache
+M:\SEP_Project\UTS_TFS\UTS_TFS\obj\Debug\UTS_TFS.Migrations.Init1.resources

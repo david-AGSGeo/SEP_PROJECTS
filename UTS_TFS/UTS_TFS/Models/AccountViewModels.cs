@@ -79,6 +79,36 @@ namespace UTS_TFS.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        //--added views of extra data here
+        [Required]
+
+        [Display(Name = "First name")]
+
+        public string firstName { get; set; }
+
+
+
+        [Required]
+
+        [Display(Name = "Last name")]
+
+        public string lastName { get; set; }
+
+
+
+        [Required]
+
+        [Display(Name = "Student/Staff Number")]
+
+        public int studentNo { get; set; }
+
+        [Required]
+
+        [Display(Name = "Phone Number")]
+
+        public string phoneNo { get; set; }
+
     }
 
     public class ResetPasswordViewModel

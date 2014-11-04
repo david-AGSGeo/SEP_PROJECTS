@@ -13,6 +13,7 @@ namespace UTS_TFS.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
                 protected override void Seed(ApplicationDbContext context)
@@ -25,7 +26,11 @@ namespace UTS_TFS.Migrations
 
                 var user = new ApplicationUser()
                 {
-                    UserName = "David@Lee42.com"
+                    UserName = "David@Lee42.com",
+                    firstName = "David",
+                    lastName = "Lee",
+                    studentNo = 11055579,
+                    phoneNo = "555-3931"
                 };
                 manager.Create(user, "Password1!");
             
