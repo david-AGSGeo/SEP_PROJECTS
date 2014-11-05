@@ -216,6 +216,11 @@
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\TravelApplications\Create.cshtml" />
+    <Content Include="Views\TravelApplications\Delete.cshtml" />
+    <Content Include="Views\TravelApplications\Details.cshtml" />
+    <Content Include="Views\TravelApplications\Edit.cshtml" />
+    <Content Include="Views\TravelApplications\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -227,16 +232,24 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\TravelApplicationsController.cs" />
     <Compile Include="Controllers\UserAdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\FundingDetails.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\JournalDetails.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\TravelApplication.cs" />
+    <Compile Include="Models\TravelDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

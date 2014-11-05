@@ -1,0 +1,72 @@
+﻿@model UTS_TFS_T4_G2.Models.TravelApplication
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TravelApplication</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isStaffMember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isStaffMember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstApplicationThisYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstApplicationThisYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.submitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.submitDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supervisorApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supervisorApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateApproved)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

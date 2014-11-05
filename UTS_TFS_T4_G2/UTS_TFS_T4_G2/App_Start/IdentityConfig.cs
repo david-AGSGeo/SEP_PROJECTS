@@ -116,13 +116,22 @@ namespace IdentitySample.Models
             var roleManager = HttpContext.Current.GetOwinContext().Get<ApplicationRoleManager>();
             const string name = "David@Lee42.com";
             const string password = "Password1!";
-            const string roleName = "Admin";
+            const string roleName1 = "Admin";
+            const string roleName2 = "Applicant";
 
             //Create Role Admin if it does not exist
-            var role = roleManager.FindByName(roleName);
-            if (role == null) {
-                role = new IdentityRole(roleName);
-                var roleresult = roleManager.Create(role);
+            var role1 = roleManager.FindByName(roleName1);
+            if (role1 == null) {
+                role1 = new IdentityRole(roleName1);
+                var roleresult = roleManager.Create(role1);
+            }
+
+            //Create Applicant Role if it doesnt exist
+            var role2 = roleManager.FindByName(roleName2);
+            if (role2 == null)
+            {
+                role2 = new IdentityRole(roleName2);
+                var roleresult = roleManager.Create(role2);
             }
 
             var user = userManager.FindByName(name);
@@ -134,8 +143,10 @@ namespace IdentitySample.Models
 
             // Add user admin to Role Admin if not already added
             var rolesForUser = userManager.GetRoles(user.Id);
-            if (!rolesForUser.Contains(role.Name)) {
-                var result = userManager.AddToRole(user.Id, role.Name);
+            if (!rolesForUser.Contains(role1.Name) && !rolesForUser.Contains(role2.Name))
+            {
+                var result = userManager.AddToRole(user.Id, role1.Name);
+                result = userManager.AddToRole(user.Id, role2.Name);
             }
         }
     }

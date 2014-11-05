@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using UTS_TFS_T4_G2.Models;
 
 namespace IdentitySample.Models
 {
@@ -26,7 +28,11 @@ namespace IdentitySample.Models
         [Display(Name = "Phone Number")]
         public string phoneNo { get; set; }
 
+        public virtual ICollection<TravelApplication> TravelApplications { get; set; }
 
+
+
+        
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -47,5 +53,7 @@ namespace IdentitySample.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<UTS_TFS_T4_G2.Models.TravelApplication> TravelApplications { get; set; }
     }
 }
