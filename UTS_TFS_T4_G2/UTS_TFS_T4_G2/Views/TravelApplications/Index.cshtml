@@ -11,12 +11,8 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.isStaffMember)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.firstApplicationThisYear)
-        </th>
+        
+        
         <th>
             @Html.DisplayNameFor(model => model.submitDate)
         </th>
@@ -29,17 +25,14 @@
         <th>
             @Html.DisplayNameFor(model => model.dateApproved)
         </th>
+        
+        
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.isStaffMember)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.firstApplicationThisYear)
-        </td>
+       
         <td>
             @Html.DisplayFor(modelItem => item.submitDate)
         </td>
@@ -52,10 +45,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.dateApproved)
         </td>
+        
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TravelApplicationID }) |
             @Html.ActionLink("Details", "Details", new { id=item.TravelApplicationID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TravelApplicationID })
+           
         </td>
     </tr>
 }

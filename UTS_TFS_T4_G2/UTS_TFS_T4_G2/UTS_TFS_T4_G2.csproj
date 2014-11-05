@@ -148,6 +148,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Views\TravelApplications\Create.cshtml" />
+    <Content Include="Views\TravelApplications\Delete.cshtml" />
+    <Content Include="Views\TravelApplications\Details.cshtml" />
+    <Content Include="Views\TravelApplications\Edit.cshtml" />
+    <Content Include="Views\TravelApplications\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,11 +221,6 @@
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\TravelApplications\Create.cshtml" />
-    <Content Include="Views\TravelApplications\Delete.cshtml" />
-    <Content Include="Views\TravelApplications\Details.cshtml" />
-    <Content Include="Views\TravelApplications\Edit.cshtml" />
-    <Content Include="Views\TravelApplications\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
