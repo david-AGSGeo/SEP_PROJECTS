@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "UTS Travel Funding System";
+}
+
+<div class="jumbotron">
+    <h1>UTS Travel Funding System</h1>
+    <p class="lead">A proptotype Travel funding system for Software Engineering Practice Assignment 3</p>
+    <p><a>by tutorial 4 Group 2</a></p>
+</div>
+
+<div class="row">
+   
+    <div class="col-md-4">
+        <dl>
+            <dt>If you are not already logged in, please login here:</dt>
+            <dd>
+                
+                 @Html.ActionLink("Log in", "Login", "Account") 
+            </dd>
+        </dl>
+    </div>
+
+    <div class="col-md-4">
+        <dl>
+            <dt>If you are logged in, you can complete and view travel applications here: </dt>
+            <dd>
+
+                 @Html.ActionLink("TravelApplications", "Index", "TravelApplications") 
+            </dd>
+        </dl>
+    </div>
+ 
+</div>
+
+ 
+   
+ 
+   
+   

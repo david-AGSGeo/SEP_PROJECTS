@@ -153,6 +153,7 @@
     <Content Include="Views\TravelApplications\Details.cshtml" />
     <Content Include="Views\TravelApplications\Edit.cshtml" />
     <Content Include="Views\TravelApplications\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\LocalHost.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

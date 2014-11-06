@@ -1,0 +1,57 @@
+﻿@model IEnumerable<UTS_TFS_T4_G2.Models.TravelApplication>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.submitDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.supervisorApproved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.totalApproved)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateApproved)
+        </th>
+        
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.submitDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.supervisorApproved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.totalApproved)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateApproved)
+        </td>
+        
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TravelApplicationID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TravelApplicationID }) |
+           
+        </td>
+    </tr>
+}
+
+</table>

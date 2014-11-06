@@ -1,0 +1,82 @@
+﻿@model UTS_TFS_T4_G2.Models.TravelApplication
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TravelApplication</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.isStaffMember)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isStaffMember)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.firstApplicationThisYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.firstApplicationThisYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.submitDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.submitDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.supervisorApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.supervisorApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.totalApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.totalApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateApproved)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateApproved)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.travelDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.travelDetails)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fundingDetails)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fundingDetails)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TravelApplicationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

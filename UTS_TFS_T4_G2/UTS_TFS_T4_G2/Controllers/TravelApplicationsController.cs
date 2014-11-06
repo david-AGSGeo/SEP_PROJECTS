@@ -51,11 +51,11 @@ namespace UTS_TFS_T4_G2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([Bind(Include = "TravelApplicationID,isStaffMember,firstApplicationThisYear,submitDate,supervisorApproved,totalApproved,dateApproved,travelDetails,fundingDetails")] TravelApplication travelApplication)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)   //--checks if application is filled out properly
             {
-                db.TravelApplications.Add(travelApplication);
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                db.TravelApplications.Add(travelApplication);       //--add to database
+                await db.SaveChangesAsync();                        //--save database changes
+                return RedirectToAction("Index");                   //--return to index view
             }
 
             return View(travelApplication);
@@ -64,12 +64,12 @@ namespace UTS_TFS_T4_G2.Controllers
         // GET: TravelApplications/Edit/5
         public async Task<ActionResult> Edit(int? id)
         {
-            if (id == null)
+            if (id == null)     //--no application to edit
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            TravelApplication travelApplication = await db.TravelApplications.FindAsync(id);
-            if (travelApplication == null)
+            TravelApplication travelApplication = await db.TravelApplications.FindAsync(id);    //--retrieve application from database
+            if (travelApplication == null)      //--if no application found, 
             {
                 return HttpNotFound();
             }
@@ -85,15 +85,15 @@ namespace UTS_TFS_T4_G2.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(travelApplication).State = EntityState.Modified;
-                await db.SaveChangesAsync();
-                return RedirectToAction("Index");
+                db.Entry(travelApplication).State = EntityState.Modified;   //--modify database
+                await db.SaveChangesAsync();                                //--save changes
+                return RedirectToAction("Index");                           //--return to index
             }
-            return View(travelApplication);
+            return View(travelApplication);                             //--otherwise highlight missing fields and stay in edit view
         }
 
         // GET: TravelApplications/Delete/5
-        public async Task<ActionResult> Delete(int? id)
+        public async Task<ActionResult> Delete(int? id)             //--disabled for iteration 1
         {
             if (id == null)
             {
@@ -107,10 +107,10 @@ namespace UTS_TFS_T4_G2.Controllers
             return View(travelApplication);
         }
 
-        // POST: TravelApplications/Delete/5
+        // POST: TravelApplications/Delete/5            //--disabled for iteration 1
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> DeleteConfirmed(int id)
+        public async Task<ActionResult> DeleteConfirmed(int id)         
         {
             TravelApplication travelApplication = await db.TravelApplications.FindAsync(id);
             db.TravelApplications.Remove(travelApplication);
